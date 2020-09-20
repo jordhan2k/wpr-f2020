@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* font-family: 'Permanent Marker', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+/* font-family: 'Ranchers', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    color: black;
+}
+
+.parallax {
+    opacity: 0.7;
+    width: 100%;
+    /* set specific heght for the para div */
+    min-height: 700px;
+    /* paralax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#para-header {
+    background-image: url("../images/austin-poon-JO_S6ewBqAk-unsplash.jpg");
+}
+
+
+/* #para-1 {
+    background-image: url("../images/austin-poon-JO_S6ewBqAk-unsplash.jpg");
+} */
+
+#para-2 {
+    background-image: url("../images/stil--837JygbCJo-unsplash.jpg");
+}
+
+
+/* #para-3 {
+    background-image: url("../images/stil--837JygbCJo-unsplash.jpg");
+} */
+
+#para-4 {
+    background-image: url("../images/ryan-ancill-shulman-h86ZkM5Qiqg-unsplash.jpg");
+}
+
+
+/* #para-5 {
+    background-image: url("../images/ryan-ancill-shulman-h86ZkM5Qiqg-unsplash.jpg");
+} */
+
+#para-6 {
+    background-image: url("../images/northfolk-Ok76F6yW2iA-unsplash.jpg");
+}
+
+#para-footer {
+    background-image: url("../images/northfolk-Ok76F6yW2iA-unsplash.jpg");
+}
+
+.gray {
+    height: min-content;
+    background-color: #b2bec3;
+}
+
+.header-footer>p {
+    font-weight: bold;
+    font-size: 70px;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: auto;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 4px 4px rgba(152, 152, 179, 0.9);
+}
+
+.content {
+    padding: 20px;
+    line-height: 30px;
+    width: 70%;
+    margin: 40px auto;
+    text-align: justify;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.white {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(248, 239, 186, 1.0);
+    clear: both;
+}
+
+.tips {
+    text-align: center;
+    height: 90%;
+    width: 30%;
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 3px 3px seashell;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(248, 239, 186, 0.5);
+}
+
+.tip-content {
+    text-align: justify;
+    width: 50%;
+    height: 90%;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Buttons */
+
+.middle {
+    margin-top: 20px;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
