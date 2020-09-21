@@ -49,3 +49,53 @@ h1 {
     padding-bottom: 10px;
     border-bottom: 2px solid #e6e6e6;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 120px;
+    justify-content: center;
+}
+
+.content {
+    width: 66.67%;
+    margin-left: 40px;
+}
+
+.content>h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+.number {
+    font-family: 'Roboto Slab', serif;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.content>img {
+    width: 100%;
+}
+
+a {
+    color: #42b4d6;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.content>p {
+    color: rgb(51, 51, 51);
+    line-height: 32px;
+}
