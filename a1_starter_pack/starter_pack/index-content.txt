@@ -1,0 +1,144 @@
+Below is the text and links used in the Personality Quiz web page.
+Copy/paste the text as needed in your *index.html* page.
+
+-----
+
+HEADER: WPR
+MERN
+
+Adopt A Dog And We'll Reveal A Deep Truth About You
+This is your pupper of truth.
+By Cong Nguyen
+
+---
+QUESTION NAME IMAGE: images/background.gif
+Pick a pup:
+
+CHOICE GRID (question 1): 
+
+CHOICE (1): data-choice-id="blep" data-question-id="one"
+IMAGE: images/blepdog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (2): data-choice-id="happy" data-question-id="one"
+IMAGE: images/happydog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (3): data-choice-id="sleeping" data-question-id="one"
+IMAGE: images/sleepingdog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (4): data-choice-id="dopey" data-question-id="one"
+IMAGE: images/dopeydog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (5): data-choice-id="burger" data-question-id="one"
+IMAGE: images/burgerdog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (6): data-choice-id="cart" data-question-id="one"
+IMAGE: images/cartdog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (7): data-choice-id="nerd" data-question-id="one"
+IMAGE: images/nerddog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (8): data-choice-id="shy" data-question-id="one"
+IMAGE: images/shydog.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (9): data-choice-id="sleepy" data-question-id="one"
+IMAGE: images/sleepydog.jpg
+IMAGE: images/unchecked.png
+
+---
+QUESTION NAME IMAGE: images/background.gif
+Pick a dog bed:
+
+CHOICE GRID (question 2): 
+
+CHOICE (1): data-choice-id="blep" data-question-id="two"
+IMAGE: images/blepbed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (2): data-choice-id="happy" data-question-id="two"
+IMAGE: images/happybed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (3): data-choice-id="sleeping" data-question-id="two"
+IMAGE: images/sleepingbed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (4): data-choice-id="dopey" data-question-id="two"
+IMAGE: images/dopeybed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (5): data-choice-id="burger" data-question-id="two"
+IMAGE: images/burgerbed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (6): data-choice-id="cart" data-question-id="two"
+IMAGE: images/cartbed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (7): data-choice-id="nerd" data-question-id="two"
+IMAGE: images/nerdbed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (8): data-choice-id="shy" data-question-id="two"
+IMAGE: images/shybed.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (9): data-choice-id="sleepy" data-question-id="two"
+IMAGE: images/sleepybed.jpg
+IMAGE: images/unchecked.png
+---
+
+---
+QUESTION NAME IMAGE: images/background.gif
+Pick a toy:
+
+CHOICE GRID (question 3): 
+
+CHOICE (1): data-choice-id="blep" data-question-id="three"
+IMAGE: images/bleptoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (2): data-choice-id="happy" data-question-id="three"
+IMAGE: images/happytoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (3): data-choice-id="sleeping" data-question-id="three"
+IMAGE: images/sleepingtoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (4): data-choice-id="dopey" data-question-id="three"
+IMAGE: images/dopeytoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (5): data-choice-id="burger" data-question-id="three"
+IMAGE: images/burgertoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (6): data-choice-id="cart" data-question-id="three"
+IMAGE: images/carttoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (7): data-choice-id="nerd" data-question-id="three"
+IMAGE: images/nerdtoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (8): data-choice-id="shy" data-question-id="three"
+IMAGE: images/shytoy.jpg
+IMAGE: images/unchecked.png
+
+CHOICE (9): data-choice-id="sleepy" data-question-id="three"
+IMAGE: images/sleepytoy.jpg
+IMAGE: images/unchecked.png
+---
+
+QUIZ RESULT: (from constants.js)
+You got: ... (title)
+... (contents)
+Restart quiz
