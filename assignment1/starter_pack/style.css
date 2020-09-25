@@ -1,1 +1,29 @@
 /* TODO(you): Write the CSS to finish the assignment! */
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+/* font-family: 'Pangolin', cursive; */
+
+body {
+    font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
+    width: 700px;
+    margin: 0 auto;
+}
+
+#quiz-name {
+    height: 425px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quiz-name>h1 {
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Pangolin', 'Trebuchet MS', cursive;
+    font-size: 60px;
+    color: black;
+    padding: 10px;
+    max-width: 75%;
+}
