@@ -176,7 +176,7 @@ async function onBtnSubmitClick() {
         const resultDiv = document.querySelector('#try-div');
         // const score = fetchedResult.score;
         percent = (totalCorrect / 10) * 100;
-        resultDiv.innerHTML = `<h2>Results</h2>
+        resultDiv.innerHTML = `<h2>Result</h2>
     <p id="diem">${totalCorrect}/10</p>
     <p style="font-weight: bold;">${percent}%</p>
     <p id="textscore"> ${fetchedResult.scoreText}</p>
