@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body {
     font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
-    /* 'Helvetica', 'Arial', */
     font-size: 18px;
     color: #222222;
     width: 700px;
@@ -54,6 +53,11 @@ header>h1 {
     align-items: center;
 }
 
+#introduction p,
+h1 {
+    margin: 0 0 18px 0;
+}
+
 
 /* start quiz */
 
@@ -62,36 +66,34 @@ header>h1 {
     background-image: url("images/background.jpg");
     background-size: cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #html-quiz>h1 {
     background-color: rgba(255, 255, 255, 0.9);
-    font-family: 'Pangolin', cursive;
-    /*'Trebuchet MS', */
+    font-family: 'Pangolin', 'Trebuchet MS', cursive;
     font-size: 60px;
     color: black;
     padding: 10px;
     max-width: 75%;
 }
 
-#quiz-name>p {
+#quiz-name {
     text-align: center;
 }
 
 #start-quiz-div {
     margin-bottom: 18px;
-    justify-content: center;
     text-align: center;
     background-color: #f1f1f1;
 }
 
-#start-quiz-div>p,
+
+/* #start-quiz-div>p,
 h1 {
     margin: 18px 0;
-}
+} */
 
 #start-quiz-div>h1 {
     margin: 0;
@@ -162,7 +164,7 @@ h1 {
 }
 
 label {
-    margin: 20px;
+    margin-left: 20px;
 }
 
 .option-r {
@@ -192,29 +194,9 @@ label {
     background-color: #d4edda;
 }
 
-.correct-green::after {
-    content: 'Correct answer';
-    position: absolute;
-    top: 11px;
-    right: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 5px;
-}
-
 .correct-gray {
     position: relative;
     background-color: #ddd;
-}
-
-.correct-gray::after {
-    content: 'Correct answer';
-    position: absolute;
-    top: 11px;
-    right: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 5px;
 }
 
 .wrong {
@@ -222,14 +204,24 @@ label {
     background-color: #f8d7da;
 }
 
+.correct-gray::after,
+.correct-green::after,
 .wrong::after {
-    content: 'Your answer';
     position: absolute;
     top: 11px;
     right: 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 5px;
+}
+
+.correct-green::after,
+.correct-gray::after {
+    content: 'Correct answer';
+}
+
+.wrong::after {
+    content: 'Your answer';
 }
 
 #try-div {
@@ -243,7 +235,7 @@ label {
     margin: 18px 0;
 }
 
-#diem {
+#score {
     font-size: 20px;
 }
 

@@ -1,10 +1,7 @@
 // TODO(you): Write the JavaScript necessary to complete the assignment
 let attID;
 let answers = {};
-let totalCorrect = 0;
 let percent = 0;
-//
-
 //
 const author = document.querySelector('#author');
 const introSec = document.querySelector('#introduction');
@@ -14,7 +11,7 @@ const quizContent = attemptSec.querySelector('#quiz-content');
 const submitDiv = attemptSec.querySelector('#sub-div');
 //
 const reviewSec = document.querySelector('#review-quiz');
-const reviewContent = reviewSec.querySelector('#review-content')
+const reviewContent = reviewSec.querySelector('#review-content');
 const trydiv = reviewSec.querySelector('#try-div');
 
 const btnStart = document.querySelector('#start-quiz');
@@ -34,7 +31,6 @@ async function fetchAttemptAPI() {
         }
     }).then(onResponse);
     attID = promise._id;
-    console.log(attID);
     return promise;
 }
 // fetch result API after a submission
@@ -44,7 +40,7 @@ async function fetchSubmitAPI() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(answers)
+        body: JSON.stringify({ "answers": answers })
     }).then(onResponse);
     return promise;
 }
@@ -61,19 +57,20 @@ async function onBtnStartClick() {
     const fetchedData = await fetchAttemptAPI();
     console.log(fetchedData);
 
-    fetchedData.questions.map((index, qkey) => {
+    fetchedData.questions.map((que, qValue) => {
+
         // Area to display each question and its options
-        const questionArea = createQuestion(qkey, index.text, index._id)
+        const questionArea = createQuestion(qValue, que.text);
         quizContent.appendChild(questionArea);
         // Option area
         const optionArea = document.createElement('form');
         optionArea.setAttribute('class', 'opt-area');
-        optionArea.setAttribute('id', index._id);
+        optionArea.setAttribute('id', que._id);
         questionArea.appendChild(optionArea);
 
         // loop through the answers array and display options
-        index.answers.map((choice, key) => {
-            const option = createOption(index._id, key, choice);
+        que.answers.map((choice, key) => {
+            const option = createOption(que._id, key, choice);
             optionArea.appendChild(option);
         })
     })
@@ -85,7 +82,7 @@ async function onBtnStartClick() {
 /**
  * Create an area to display a question
  */
-function createQuestion(qkey, indexText) {
+function createQuestion(qValue, queText) {
     const questionArea = document.createElement('div');
     questionArea.setAttribute('class', 'question');
     // Area to display question text
@@ -93,11 +90,11 @@ function createQuestion(qkey, indexText) {
     questionText.setAttribute('class', 'question-text');
     // Display the index of questions
     const questionIndex = document.createElement('h2');
-    questionIndex.innerHTML = `Question ${qkey + 1 } of 10`;
+    questionIndex.innerHTML = `Question ${qValue + 1 } of 10`;
     questionArea.appendChild(questionIndex);
     // Question text content
     const questionContent = document.createElement('p');
-    questionContent.innerHTML = indexText;
+    questionContent.innerHTML = queText;
     questionArea.appendChild(questionContent);
     return questionArea;
 }
@@ -135,10 +132,7 @@ function changeClick(event) {
         activeDiv.classList.remove('click-change');
     }
     target.classList.add('click-change');
-
     answers[`${form.id}`] = target.id;
-
-
 }
 /**
  * On clicking the submit button
@@ -149,36 +143,36 @@ async function onBtnSubmitClick() {
         document.body.scrollIntoView();
         attemptSec.classList.add('hidden');
         reviewSec.classList.remove('hidden');
-        console.log(answers);
+
         const fetchedResult = await fetchSubmitAPI();
         console.log(fetchedResult);
-        console.log(fetchedResult.answers);
+
         const correctAnswers = fetchedResult.correctAnswers;
-        fetchedResult.questions.map((index, qkey) => {
+        fetchedResult.questions.map((que, qValue) => {
 
             // Area to display each question
-            const questionArea = createQuestion(qkey, index.text, index._id);
+            const questionArea = createQuestion(qValue, que.text);
             reviewContent.appendChild(questionArea);
 
             // Option area
             const optionArea = document.createElement('form');
             optionArea.setAttribute('class', 'opt-area');
-            optionArea.setAttribute('id', index._id);
+            optionArea.setAttribute('id', que._id);
             questionArea.appendChild(optionArea);
 
             // loop through the answers array and display options
-            index.answers.map((choice, key) => {
-                const option = createOptionReview(index._id, key, choice, correctAnswers);
+            que.answers.map((choice, key) => {
+                const option = createOptionReview(que._id, key, choice, correctAnswers);
                 optionArea.appendChild(option);
             })
         })
 
         const resultDiv = document.querySelector('#try-div');
         // const score = fetchedResult.score;
-        percent = (totalCorrect / 10) * 100;
+
         resultDiv.innerHTML = `<h2>Result</h2>
-    <p id="diem">${totalCorrect}/10</p>
-    <p style="font-weight: bold;">${percent}%</p>
+    <p id="score">${fetchedResult.score}/10</p>
+    <p style="font-weight: bold;">${fetchedResult.score/10 * 100}%</p>
     <p id="textscore"> ${fetchedResult.scoreText}</p>
     <div id="try-again" class="button blue">Try again</div>`;
 
@@ -208,7 +202,6 @@ function createOptionReview(qID, key, choice, correctAnswers) {
     }
     if (key === parseInt(correctAnswers[qID]) && parseInt(answers[qID]) === key) {
         div.classList.add('correct-green');
-        totalCorrect++;
     }
     if (key === parseInt(correctAnswers[qID]) && parseInt(answers[qID]) !== key) {
         div.classList.add('correct-gray');
@@ -216,7 +209,6 @@ function createOptionReview(qID, key, choice, correctAnswers) {
     if (parseInt(correctAnswers[qID]) !== parseInt(answers[qID]) && parseInt(answers[qID]) === key) {
         div.classList.add('wrong');
     }
-    console.log(totalCorrect);
     label.textContent = choice;
     return option;
 }
