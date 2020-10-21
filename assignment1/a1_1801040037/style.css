@@ -1,0 +1,264 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+body {
+    font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
+    /* 'Helvetica', 'Arial', */
+    font-size: 18px;
+    color: #222222;
+    width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* header */
+
+header {
+    height: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+header>h1 {
+    display: inline-block;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ee3322;
+}
+
+#stack {
+    display: inline-flex;
+}
+
+.flex-letter {
+    display: flex;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffee00;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotateZ(-30deg);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* start quiz */
+
+#html-quiz {
+    height: 425px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#html-quiz>h1 {
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Pangolin', cursive;
+    /*'Trebuchet MS', */
+    font-size: 60px;
+    color: black;
+    padding: 10px;
+    max-width: 75%;
+}
+
+#quiz-name>p {
+    text-align: center;
+}
+
+#start-quiz-div {
+    margin-bottom: 18px;
+    justify-content: center;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+#start-quiz-div>p,
+h1 {
+    margin: 18px 0;
+}
+
+#start-quiz-div>h1 {
+    margin: 0;
+    padding-top: 36px;
+    padding-bottom: 18px;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    padding: 18px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.blue {
+    background-color: #2196F3;
+}
+
+#sub-div {
+    margin: 18px 0 18px 0;
+    background-color: #f1f1f1;
+}
+
+#submit-answer {
+    margin: 18px 0;
+    background-color: #4CAF50;
+}
+
+#submit-answer:hover {
+    background-color: #46a049;
+}
+
+.blue:hover {
+    background-color: #0d8bf2;
+    border: none;
+}
+
+.button-2 {
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Attempt quiz */
+
+.question>form {
+    margin: 0;
+}
+
+.question {
+    padding: 0;
+}
+
+.question>h2 {
+    margin: 18px 0;
+}
+
+.opt-area {
+    margin: 30px 0;
+}
+
+.option {
+    display: block;
+    padding: 15px;
+    margin: 1px 0;
+    background-color: #f1f1f1;
+}
+
+label {
+    margin: 20px;
+}
+
+.option-r {
+    display: block;
+    padding: 15px;
+    margin: 1px 0;
+    background-color: #f1f1f1;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+.click-change {
+    background-color: #ddd;
+}
+
+
+/* Review */
+
+.correct-green {
+    position: relative;
+    background-color: #d4edda;
+}
+
+.correct-green::after {
+    content: 'Correct answer';
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.correct-gray {
+    position: relative;
+    background-color: #ddd;
+}
+
+.correct-gray::after {
+    content: 'Correct answer';
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.wrong {
+    position: relative;
+    background-color: #f8d7da;
+}
+
+.wrong::after {
+    content: 'Your answer';
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+#try-div {
+    margin: 18px 0;
+    justify-content: center;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+#try-div>p {
+    margin: 18px 0;
+}
+
+#diem {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #stack {
+        display: none;
+    }
+    html {
+        font-size: 13px;
+    }
+}
