@@ -152,6 +152,7 @@ async function onBtnSubmitClick() {
         console.log(answers);
         const fetchedResult = await fetchSubmitAPI();
         console.log(fetchedResult);
+        console.log(fetchedResult.answers);
         const correctAnswers = fetchedResult.correctAnswers;
         fetchedResult.questions.map((index, qkey) => {
 
@@ -173,6 +174,7 @@ async function onBtnSubmitClick() {
         })
 
         const resultDiv = document.querySelector('#try-div');
+        // const score = fetchedResult.score;
         percent = (totalCorrect / 10) * 100;
         resultDiv.innerHTML = `<h2>Results</h2>
     <p id="diem">${totalCorrect}/10</p>
