@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Dictionary</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/update.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Dictionary</h1>
+        <a href="/add.html">+ Add a word</a>
+
+        <form>
+            <label for="key">Loop up for word: </label>
+            <input type="text" id="key" />
+            <button type="submit">Search!</button>
+        </form>
+        <hr>
+        <div id="result" class="hidden">
+            The definition of <strong id="word"></strong> is:
+            <p id="definition"></p>
+        </div>
+        <form method="GET" action="add.html" id="form-update" class="hidden">
+            <h2>Update this word</h2>
+            <div>
+                <label for="word">Word: </label>
+                <input type="text" name="word" id="word" readonly />
+            </div>
+            <div>
+                <label for="definition">Definition: </label>
+                <textarea name="definition" id="definition" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Update</button>
+            <hr>
+            <div id="result"></div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Dictionary</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add a word</h1>
+
+        <form>
+            <div>
+                <label for="word">Word: </label>
+                <input type="text" name="word" id="word" />
+            </div>
+            <div>
+                <label for="definition">Definition: </label>
+                <textarea id="definition" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Save</button>
+        </form>
+        <hr>
+        <div id="message"></div>
+    </div>
+</body>
+
+</html>

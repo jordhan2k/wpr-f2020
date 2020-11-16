@@ -1,0 +1,31 @@
+body {
+    background-color: #d0e6df;
+    text-align: center;
+}
+
+a {
+    display: inline-block; 
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    text-align: left;
+}
+
+form label {
+    display: inline-block;
+    min-width:  100px;
+}
+
+#result {
+    color: red;
+}
